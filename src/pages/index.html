@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+<div id="menu" class="grid-container">
+    <div class="grid-item">
+        <div id="btnRandomVariable" class="custom-div-button">
+            <img class="function"/>
+            <span>Random Variable</span>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div id="btnOutput" class="custom-div-button">
+            <img class="output"/>
+            <span>Output Variable</span>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div id="btnMontecarlo" class="custom-div-button">
+            <img class="montecarlo"/>
+            <span>Montecarlo Simulation</span>
+        </div>
+    </div>
+</div>
+
+<form id="randomVariableForm" name="randomVariableForm" class="needs-validation p-2 d-none" novalidate>
+    <div class="form-group ">
+        <label for="randomVariableNameInput">Random variable name</label>
+        <input type="text" class="form-control" id="randomVariableNameInput" placeholder="Add variable name ..."
+               required>
+        <div class="invalid-feedback">
+            Variable name is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="distributionSelect">Select Distribution</label>
+        <select class="form-control" id="distributionSelect" required>
+            <option value="">Select distribution</option>
+        </select>
+        <div class="invalid-feedback">Distribution is required</div>
+    </div>
+    <button type="submit" class="btn d-flex btn-primary">Add</button>
+</form>
+<form id="outputForm" name="outputForm" class="needs-validation p-2 d-none" novalidate>
+    <div class="form-group ">
+        <label for="outputNameInput">Output variable name</label>
+        <input type="text" class="form-control" id="outputNameInput" placeholder="Add output variable name ..."
+               required>
+        <div class="invalid-feedback">
+            Output variable name is required.
+        </div>
+    </div>
+    <button type="submit" class="btn d-flex btn-primary">Add</button>
+</form>
+
+<form id="montecarloForm" name="montecarloForm" class="needs-validation p-2 d-none" novalidate>
+
+    <div id="mcList" class="mc-list">
+    </div>
+
+    <div class="form-group ">
+        <label for="replicateInput">Replicate Number</label>
+        <input type="number" class="form-control" id="replicateInput" placeholder="Add replicate number ..."
+               required>
+        <div class="invalid-feedback">
+            Replicate Number is required.
+        </div>
+    </div>
+
+    <div style="display: flex;align-content: end;flex-direction: row">
+        <button id="mcStep" type='button' class='btn btn-primary mr-2'>
+            Step <i class='fa fa-eject fa-rotate-90'></i>
+        </button>
+
+        <button id="mcSimulate" type='button' class='btn btn-primary mr-2'>
+            Simulate <i class='fa fa-play'></i>
+        </button>
+
+        <button id="mcClear" type='button' class='btn btn-danger'>
+            Clear <i class='fa fa-trash'></i>
+        </button>
+    </div>
+</form>
+
+<div id="backContainer" class="grid-item-right d-none">
+    <button id="btnBack" class="btn btn-outline-primary"><i class="fa fa-arrow-left"></i> Back</button>
+</div>
+
+<script type="text/javascript" src="/src/js/index.js"></script>
+<script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/beta/hosted/office.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

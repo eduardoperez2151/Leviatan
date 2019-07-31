@@ -1,0 +1,104 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 125px 125px;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.grid-item {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    min-height: 125px;
+    min-width: 125px;
+}
+
+.grid-item-right {
+    justify-self: start;
+}
+
+.custom-div-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: all 0.4s ease;
+    padding: 5px;
+    color: #007bff;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.custom-div-button img {
+    width: 45px;
+    height: 45px;
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+    pointer-events: none;
+}
+
+.custom-div-button .function {
+    content: url("../assets/function.svg");
+}
+
+.custom-div-button .parameters {
+    content: url("../assets/parameters.svg");
+}
+
+.custom-div-button .output {
+    content: url("../assets/output.svg");
+}
+
+.custom-div-button .montecarlo {
+    content: url("../assets/montecarlo.svg");
+}
+
+.custom-div-button:hover {
+    transform: scale(1.1);
+    border: 1px solid #007bff;
+}
+
+
+.montecarlo-component-container {
+    display: grid;
+    width: 250px;
+    grid-auto-flow: row;
+}
+
+.mc-list {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.mc-item-list {
+    width: 100%;
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.mc-item-info {
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mc-item-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
